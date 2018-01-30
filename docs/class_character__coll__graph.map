@@ -1,0 +1,8 @@
+<map id="Character" name="Character">
+<area shape="rect" id="node5" href="$class_character_move.html" title="Astract base class for character moves " alt="" coords="273,1108,387,1215"/>
+<area shape="rect" id="node7" href="$class_enemy.html" title="Defines an AI controller enemy to fight in battle scenes" alt="" coords="268,601,357,678"/>
+<area shape="rect" id="node9" href="$class_player.html" title="Defines a playable character for use in battle scenes" alt="" coords="503,564,653,715"/>
+<area shape="rect" id="node4" href="$class_special_move.html" title="Special move abstract base class that expands upon CharacterMove, adding magic properties ..." alt="" coords="159,1264,290,1385"/>
+<area shape="rect" id="node6" href="$class_battle_manager.html" title="Holds current Player and Enemy objects in battle and provides functions for MainBattle and other obje..." alt="" coords="367,792,522,1045"/>
+<area shape="rect" id="node10" href="$class_item.html" title="Abstract class for items that can be equipped to a player, increasing some of their stats ..." alt="" coords="629,314,732,421"/>
+</map>

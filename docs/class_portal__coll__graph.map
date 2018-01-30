@@ -1,0 +1,5 @@
+<map id="Portal" name="Portal">
+<area shape="rect" id="node2" href="$class_mono_behaviour.html" title="{MonoBehaviour\n||}" alt="" coords="59,5,170,83"/>
+<area shape="rect" id="node4" href="$class_scene_changer.html" title="A set of functions to be called to change scenes smoothly whilst handling the player&#39;s location and a..." alt="" coords="281,417,412,597"/>
+<area shape="rect" id="node8" href="$class_player_movement.html" title="A script to control the movement and animations of the player" alt="" coords="607,175,747,355"/>
+</map>

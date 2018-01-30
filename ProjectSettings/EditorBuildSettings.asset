@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Menus/MainMenu/mainmenu1.unity
+    guid: 8d411f211734a45a98ebaeb652359071
+  - enabled: 1
+    path: Assets/Exploration/Scenes/CS-Jail.unity
+    guid: ddde2769e35159e4f8c1ec698a7da5f3
+  - enabled: 1
+    path: Assets/WorldMap/Scenes/WorldMap.unity
+    guid: daac6ab5008e1ea4295b513ad427c54a
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Main.unity
+    guid: b3f58439df6497b4abfc01fd0228ef4c
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Alternate.unity
+    guid: 4793657b033918b42a49956f7c112329
+  - enabled: 1
+    path: Assets/Battle/Battle.unity
+    guid: 4ecfa394df50c7c46acec1e25e1219ca
+  - enabled: 1
+    path: Assets/PlayTests/ExplorationTestScene.unity
+    guid: ebea0e8f39d99db46a1f573df476cba7
+  - enabled: 1
+    path: Assets/Exploration/Scenes/CS-Ground.unity
+    guid: 9561ca091b1eafb4196af4eaf2fc4009
+  - enabled: 1
+    path: Assets/Exploration/Scenes/CS-Floor1.unity
+    guid: c09e92b1cbf4d8c499a15e1e776d6adc
+  - enabled: 1
+    path: Assets/Exploration/Scenes/TFTV-Ground.unity
+    guid: 26ed5f62c07d42342802c2622f191ded
+  - enabled: 1
+    path: Assets/Exploration/Scenes/TFTV-Floor1.unity
+    guid: ea9a8ef512c94af4f83969884fd111f7
+  - enabled: 1
+    path: Assets/Exploration/Scenes/TFTV-Floor2.unity
+    guid: cd05323ad4946474ba2cb322371827e4
+  - enabled: 1
+    path: Assets/Exploration/Scenes/TFTV-Floor3.unity
+    guid: 7982107ce71252e4eb48fe8246561318
+  - enabled: 1
+    path: Assets/Menus/ExplorationMenu/ItemMenu.unity
+    guid: 48505b1b792ae544992122802d6fd914
+  - enabled: 1
+    path: Assets/Exploration/Scenes/RCH.unity
+    guid: cc90fc47c6856b349bda99408b844df0
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Library-Floor1.unity
+    guid: c030957e18864274d9d502951a132d23
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Library-Ground.unity
+    guid: ea70f791fab0b334d8f49e42dfca49db
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Physics.unity
+    guid: 576f330882a62a847b400d339d487796
+  - enabled: 1
+    path: Assets/PlayTests/BattleTestInitialScene.unity
+    guid: 08ddc60e67946b54fb2418b5f0d05cd3
+  - enabled: 1
+    path: Assets/Menus/ExplorationMenu/GameMenu.unity
+    guid: 09e10be73d1467a40b528fb43ebff00f
+  - enabled: 1
+    path: Assets/Menus/ExplorationMenu/Party.unity
+    guid: 99cbee4a5b55747d6a56777d38a752fd
+  - enabled: 1
+    path: Assets/Battle/SwitchPlayer.unity
+    guid: 5ff7ff44e0bdf504e9a646c403a7e7e6
