@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newScene: TFTV-Ground
-  newPosition: {x: 0, y: 0}
+  newPosition: {x: 113, y: -115}
 --- !u!1 &1191828938
 GameObject:
   m_ObjectHideFlags: 0
