@@ -65,6 +65,10 @@ public class PlayerMovement : MonoBehaviour {
 //				50, null, false);
 //		}
 
+		if (Input.GetKeyDown(KeyCode.P)){
+			ShopMenu();
+		}
+
 		if (Input.GetKeyDown (KeyCode.Escape) || pseudoEscapeKeyPress) {
 			explorationMenu ();
 		}
@@ -94,7 +98,8 @@ public class PlayerMovement : MonoBehaviour {
 	private void explorationMenu() {
 		//Make sure menu can't be opened while dialogue box is on screen
 		if (GameObject.Find ("DialogueBox") == null 
-			&& GameObject.Find("Fader") == null) {  //Or when changing scene
+			&& GameObject.Find("Fader") == null//Or when changing scene
+			&& GameObject.Find("ShopMenu") == null ) { // Or when the shop is open
 			if (SceneChanger.instance.menuOpen) {
 				Debug.Log ("Close");
 				SceneChanger.instance.menuOpen = false;
@@ -106,6 +111,16 @@ public class PlayerMovement : MonoBehaviour {
 				SceneManager.LoadScene ("GameMenu", LoadSceneMode.Additive);
 			}
 			pseudoEscapeKeyPress = false;
+		}
+	}
+
+	private void ShopMenu() {
+		//Make sure shop can't be opened while dialogue box is on screen
+		if (GameObject.Find ("DialogueBox") == null 
+			&& GameObject.Find("Fader") == null //Or when changing scene
+			&& SceneChanger.instance.menuOpen == false // Or if the pause menu is open
+			&& GameObject.Find("ShopMenu") == null ) { // Or when the shop is open
+				SceneManager.LoadScene ("ShopMenu", LoadSceneMode.Additive);
 		}
 	}
 
