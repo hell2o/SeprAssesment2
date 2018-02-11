@@ -74,3 +74,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Menus/ExplorationMenu/ShopMenu.unity
     guid: 95c82f82ec95892429d1950e41e77584
+  - enabled: 1
+    path: Assets/MiniGame/MiniGame.unity
+    guid: bfaa74a758a60594891766daa20c306b

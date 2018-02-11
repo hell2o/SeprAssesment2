@@ -161,6 +161,7 @@ public abstract class Character {
 	}
 
 	/// <summary>
+	/// New for assessment 3
 	/// Prepares hard to encode data for saving.
 	/// </summary>
 	public void PrepareSave (){
@@ -178,6 +179,7 @@ public abstract class Character {
 		}
 	}
 	/// <summary>
+	/// New for assessment 3
 	/// Recovers data from saving format.
 	/// </summary>
 	public void RecoverSave(){

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 /// <summary>
+/// New for assessment 3
 /// Shop menu script, handles purchases and drag and drop.
 /// </summary>
 public class ShopMenuScript : MonoBehaviour {

@@ -26,6 +26,7 @@ public class PlayerData : MonoBehaviour {
 		}
 	}
 	/// <summary>
+	/// New for assessment 3
 	/// Saves this instance.
 	/// </summary>
 	public void save(){
@@ -41,6 +42,10 @@ public class PlayerData : MonoBehaviour {
 		saveFile.Close ();
 	}
 
+	/// <summary>
+	/// New for assesment 3
+	/// Load this instance from the save file.
+	/// </summary>
 	public void load(){
 		FileStream loadFile = File.OpenRead (Application.dataPath + "/save.geese2");
 		BinaryFormatter formatter = new BinaryFormatter ();
