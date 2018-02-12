@@ -32,7 +32,7 @@ public class Minigame : MonoBehaviour {
 	const float maxTimeBetweenPopups = 1f;
 	const float maxActiveTime = 2f;
 	float activeTime = 2f;// how long the popups can currently be active for (in seconds)
-	const float minActiveTime = 0.3f;
+	const float minActiveTime = 0.4f;
 
 	int score = 0;
 	int lives = 3;
@@ -45,8 +45,6 @@ public class Minigame : MonoBehaviour {
 		gooseButtons = new List<GameObject> ();
 		bunnyButtonsTimeActive = new List<float> ();
 		gooseButtonsTimeActive = new List<float> ();
-
-		this.transform.parent.position += new Vector3 (0f, 100000f); // move the minigame away from other loaded stuff
 
 		scoreText = GameObject.Find ("ScoreText").GetComponent<Text> ();
 		livesText = GameObject.Find ("LivesText").GetComponent<Text> ();
@@ -93,8 +91,9 @@ public class Minigame : MonoBehaviour {
 		if (inGame) {
 			gameTime += Time.deltaTime;
 
-			float tempActiveTime = 2f * (maxActiveTime / Mathf.Pow(gameTime, 0.5f)); // function that defines how long buttons are visible for
+			float tempActiveTime =  (maxActiveTime / Mathf.Pow(gameTime, 0.5f)); // function that defines how long buttons are visible for
 			activeTime = Mathf.Clamp (tempActiveTime, minActiveTime, maxActiveTime); //clamp the above into a reasonable range
+			Debug.Log(activeTime);
 			for (int i = 0; i < bunnyButtons.Count; i++) {
 				if (bunnyButtons [i].activeInHierarchy) {
 					bunnyButtonsTimeActive[i] += Time.deltaTime;

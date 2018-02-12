@@ -19,6 +19,7 @@ public class PlayerData : MonoBehaviour {
 	/// </summary>
 	void Awake() {
 		if (instance == null) {
+			data = new DataManager (null);
 			instance = this;
 			DontDestroyOnLoad (gameObject);
 		} else if (instance != this) {

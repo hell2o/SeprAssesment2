@@ -11,6 +11,10 @@ public class CameraController : MonoBehaviour {
 	void Start () {
 		target = GameObject.Find ("Player");
 	}
+
+	void Awake(){
+		Start ();
+	}
 	
 	/// <summary>
 	/// On every update, set the position of the camera to the same position as the player object

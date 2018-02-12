@@ -16,8 +16,20 @@ public class ExplorationTest {
 
 	public IEnumerator Setup() {
 		if (!sceneLoaded) {
+			//because other tests may have made a mess
+			foreach (GameObject g in Resources.FindObjectsOfTypeAll<GameObject>()) {
+				if (g.name == "Player") {
+					g.SetActive (true);
+				}
+			}
+			yield return null;
 			SceneManager.LoadScene ("ExplorationTestScene", LoadSceneMode.Single);
 			yield return null; //Wait for scene to load
+			PlayerData.instance.data = new DataManager(null);
+			PlayerData.instance.data.Players [0] = new Player ("George", 1, 100, 30, 5, 5, 5, 5, 5, 0, null,
+				new MagicAttack ("hi-jump kicked", "Kick with power 15", 3, 15),
+				new RaiseDefence ("buffed up against", "Increase your defence by 10%", 2, 0.1f),
+				(Texture2D)Resources.Load ("Character1", typeof(Texture2D)));
 			player = GameObject.Find ("Player");
 			playerScript = player.GetComponent<PlayerMovement> ();
 			camera = GameObject.Find ("PlayerCamera");

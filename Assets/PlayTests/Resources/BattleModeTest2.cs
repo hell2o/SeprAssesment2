@@ -23,6 +23,7 @@ public class BattleModeTest2 {
 		if (!sceneLoaded) {
 			SceneManager.LoadScene ("BattleTestInitialScene", LoadSceneMode.Single);
 			yield return null; //Wait for scene to load
+			PlayerData.instance.data = new DataManager(null);
 			playableCharacter = GameObject.Find ("Player");
 			movementScript = playableCharacter.GetComponent<PlayerMovement> ();
 			sceneLoaded = true;
@@ -44,11 +45,15 @@ public class BattleModeTest2 {
 	public IEnumerator B6StartNextBattle() {
 		yield return Setup ();
 		//Add new player for testing
-//		DataManager data = PlayerData.instance.data;
-//		data.addPlayer (new Player ("Hannah", 5, 100, 5, 5, 5, 5, 5, 5, 0, null,
-//			new IncreaseMoney ("stole money from", "Increase money returns by 50%", 2, 0.5f),
-//			new MagicAttack ("threw wine battles at", "Thorw wine bottles with damage 15", 2, 15),
-//			(Texture2D)Resources.Load ("Character2", typeof(Texture2D))));
+		DataManager data = PlayerData.instance.data;
+		data.Players [0] = new Player ("George", 1, 100, 30, 5, 5, 5, 5, 5, 0, null,
+			new MagicAttack ("hi-jump kicked", "Kick with power 15", 3, 15),
+			new RaiseDefence ("buffed up against", "Increase your defence by 10%", 2, 0.1f),
+			(Texture2D)Resources.Load ("Character1", typeof(Texture2D)));
+		data.addPlayer (new Player ("Hannah", 5, 100, 5, 5, 5, 5, 5, 5, 0, null,
+			new IncreaseMoney ("stole money from", "Increase money returns by 50%", 2, 0.5f),
+			new MagicAttack ("threw wine battles at", "Thorw wine bottles with damage 15", 2, 15),
+			(Texture2D)Resources.Load ("Character2", typeof(Texture2D))));
 
 		//Move to next fight
 		yield return moveForFrames(20, "Left");

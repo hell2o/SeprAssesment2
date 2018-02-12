@@ -655,6 +655,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 23001510891669838, guid: 482f958a8f2dc8941bb586cf88048ea9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451233359942830, guid: 482f958a8f2dc8941bb586cf88048ea9, type: 2}
+      propertyPath: m_TagString
+      value: CS
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095817807508106, guid: 482f958a8f2dc8941bb586cf88048ea9, type: 2}
+      propertyPath: m_TagString
+      value: RCH
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754823140794236, guid: 482f958a8f2dc8941bb586cf88048ea9, type: 2}
+      propertyPath: m_TagString
+      value: TFTV
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 68125095529300438, guid: 482f958a8f2dc8941bb586cf88048ea9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 482f958a8f2dc8941bb586cf88048ea9, type: 2}
