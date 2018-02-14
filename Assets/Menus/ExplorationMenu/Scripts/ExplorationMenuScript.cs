@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// A script to manage the exploration menu that the user can call up at anytime
@@ -18,7 +19,11 @@ public class ExplorationMenuScript : MonoBehaviour {
 		movementScript = FindObjectOfType<PlayerMovement> ();
 		//menuBox = gameObject.transform.Find ("MenuScript").gameObject;
 		SceneChanger.instance.menuOpen = true;
-		//setInactive ();
+
+		if (!SceneManager.GetSceneByName ("WorldMap").IsValid ()) {
+			Button saveButton = GameObject.Find ("SaveButton").GetComponent<Button> ();
+			saveButton.interactable = false;
+		}
 	}
 
 	/// <summary>
