@@ -47,55 +47,45 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 
-	/// <summary>
-	/// Called once per frame to check the user key presses.
-	/// </summary>
-	void FixedUpdate () {
-		if (canMove && SceneChanger.instance.menuOpen) {
-			setCanMove (false);
-		}
+    /// <summary>
+    /// Called once per frame to check the user key presses.
+    /// </summary>
+    void FixedUpdate()
+    {
+        if (canMove && SceneChanger.instance.menuOpen)
+        {
+            setCanMove(false);
+        }
 
-		// For testing, allows a battle to be started by pressing the enter key
+        // For testing, allows a battle to be started by pressing the enter key
 
-//		if (Input.GetKeyDown (KeyCode.Return)) {
-//			GlobalFunctions.instance.createBattle (new Enemy ("Swinefoogle", 5, 100, 15, 5, 5, 5, 5, 5,
-//				new MagicAttack("fireballed", "Fireball", 30, 3),
-//				new MagicAttack("fireballed", "Fireball", 30, 5),
-//				(Texture2D) Resources.Load("Little_Green_Enemy", typeof(Texture2D))),
-//				50, null, false);
-//		}
-
-		if (Input.GetKeyDown(KeyCode.P)){
-			ShopMenu();
-		}
-
-		if (Input.GetKeyDown (KeyCode.Escape) || pseudoEscapeKeyPress) {
-			explorationMenu ();
-		}
-
-		if (Input.GetKey (KeyCode.UpArrow)) {
-			move ("Up");
-		} else {
-			if (Input.GetKey (KeyCode.DownArrow)) {
-				move ("Down");
-			} else {
-				if (Input.GetKey (KeyCode.LeftArrow)) {
-					move ("Left");
-				} else {
-					if (Input.GetKey (KeyCode.RightArrow)) {
-						move ("Right");
-					} else {
-						setIdle ();
-					}
-				}
-			}
-		}
-	}
-
-	/// <summary>
-	/// Shows or hides the exploration menu when the escape key is pressed, detected and called by <see cref="FixedUpdate"/> 
-	/// </summary>
-	private void explorationMenu() {
+        //		if (Input.GetKeyDown (KeyCode.Return)) {
+        //			GlobalFunctions.instance.createBattle (new Enemy ("Swinefoogle", 5, 100, 15, 5, 5, 5, 5, 5,
+        //				new MagicAttack("fireballed", "Fireball", 30, 3),
+        //				new MagicAttack("fireballed", "Fireball", 30, 5),
+        //				(Texture2D) Resources.Load("Little_Green_Enemy", typeof(Texture2D))),
+        //				50, null, false);
+        //		} 
+        if (Input.GetKeyDown(KeyCode.P)) {
+            ShopMenu();
+        } else if (Input.GetKeyDown(KeyCode.Escape) || pseudoEscapeKeyPress) {
+            explorationMenu();
+        } else if (Input.GetKey(KeyCode.UpArrow)) {
+            move("Up");
+        } else if (Input.GetKey(KeyCode.DownArrow)) {
+            move("Down");
+        } else if (Input.GetKey(KeyCode.LeftArrow)) {
+            move("Left");
+        } else if (Input.GetKey(KeyCode.RightArrow)) {
+            move("Right");
+        } else {
+            setIdle();
+        }
+    }
+    /// <summary>
+    /// Shows or hides the exploration menu when the escape key is pressed, detected and called by <see cref="FixedUpdate"/> 
+    /// </summary>
+    private void explorationMenu() {
 		//Make sure menu can't be opened while dialogue box is on screen
 		if (GameObject.Find ("DialogueBox") == null 
 			&& GameObject.Find("Fader") == null//Or when changing scene
