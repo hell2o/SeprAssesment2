@@ -34,7 +34,7 @@ public class DialogueScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (dialogueActive && keyPress()) {
+		if (dialogueActive && keyPress ()) {
 			if (currentLineIndex + 1 < dialogueLines.Length) {
 				currentLineIndex += 1;
 				showLine (dialogueLines [currentLineIndex]);

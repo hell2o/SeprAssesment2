@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Provides functions and variables to be accessed by any game object to allow data to be passed between scenes
@@ -97,6 +98,19 @@ public class GlobalFunctions : MonoBehaviour {
 		SoundManager.instance.playBGM (GlobalFunctions.instance.previousBGM);
 		SceneChanger.instance.loadLevel (GlobalFunctions.instance.previousScene);
 		player.SetActive (true);
+	}
+
+	/// <summary>
+	/// Opens the shop menu.
+	/// </summary>
+	public void ShopMenu() {
+		//Make sure shop can't be opened while dialogue box is on screen
+		if (GameObject.Find ("DialogueBox") == null 
+			&& GameObject.Find("Fader") == null //Or when changing scene
+			&& SceneChanger.instance.menuOpen == false // Or if the pause menu is open
+			&& GameObject.Find("ShopMenu") == null ) { // Or when the shop is open
+			SceneManager.LoadScene ("ShopMenu", LoadSceneMode.Additive);
+		}
 	}
 
 	/// <summary>

@@ -29,6 +29,7 @@ public class ObjectInteraction : MonoBehaviour {
 	/// </summary>
 	[Header("If true, requires a BattleDescriptor component")]
 	public bool createBattle = false;
+	public bool isShop = false;
 
 	//Script References
 	private DialogueScript dManager;
@@ -94,6 +95,9 @@ public class ObjectInteraction : MonoBehaviour {
 		if (createBattle) {
 			GlobalFunctions.instance.objectsActive [id] = false;
 			gameObject.GetComponent<BattleDescriptor> ().createBattle ();
+		}
+		if (isShop) {
+			GlobalFunctions.instance.ShopMenu ();
 		}
 	}
 			

@@ -616,6 +616,103 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1033483716
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
+        type: 2}
+      propertyPath: dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -49.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 23.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 212996946334501392, guid: 029c17544fabbde43bb73a9f1d1359b7,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd8ccc81de7b08548b75764fa47ffead,
+        type: 3}
+    - target: {fileID: 212996946334501392, guid: 029c17544fabbde43bb73a9f1d1359b7,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212996946334501392, guid: 029c17544fabbde43bb73a9f1d1359b7,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212996946334501392, guid: 029c17544fabbde43bb73a9f1d1359b7,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 58004800574002856, guid: 029c17544fabbde43bb73a9f1d1359b7,
+        type: 2}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
+        type: 2}
+      propertyPath: dialogue.Array.data[0]
+      value: Maybe We'd sell more if we built a shop here
+      objectReference: {fileID: 0}
+    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
+        type: 2}
+      propertyPath: dialogue.Array.data[1]
+      value: Like some kind of "Market", like a square one or something
+      objectReference: {fileID: 0}
+    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
+        type: 2}
+      propertyPath: dialogue.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344385287322598, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+      propertyPath: m_Name
+      value: Shop Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
+        type: 2}
+      propertyPath: isShop
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1084306533
 Prefab:
   m_ObjectHideFlags: 0

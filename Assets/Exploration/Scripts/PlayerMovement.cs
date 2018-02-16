@@ -66,9 +66,7 @@ public class PlayerMovement : MonoBehaviour {
         //				(Texture2D) Resources.Load("Little_Green_Enemy", typeof(Texture2D))),
         //				50, null, false);
         //		} 
-        if (Input.GetKeyDown(KeyCode.P)) {
-            ShopMenu();
-        } else if (Input.GetKeyDown(KeyCode.Escape) || pseudoEscapeKeyPress) {
+        if (Input.GetKeyDown(KeyCode.Escape) || pseudoEscapeKeyPress) {
             explorationMenu();
         } else if (Input.GetKey(KeyCode.UpArrow)) {
             move("Up");
@@ -85,7 +83,7 @@ public class PlayerMovement : MonoBehaviour {
     /// <summary>
     /// Shows or hides the exploration menu when the escape key is pressed, detected and called by <see cref="FixedUpdate"/> 
     /// </summary>
-    private void explorationMenu() {
+    public void explorationMenu() {
 		//Make sure menu can't be opened while dialogue box is on screen
 		if (GameObject.Find ("DialogueBox") == null 
 			&& GameObject.Find("Fader") == null//Or when changing scene
@@ -101,16 +99,6 @@ public class PlayerMovement : MonoBehaviour {
 				SceneManager.LoadScene ("GameMenu", LoadSceneMode.Additive);
 			}
 			pseudoEscapeKeyPress = false;
-		}
-	}
-
-	private void ShopMenu() {
-		//Make sure shop can't be opened while dialogue box is on screen
-		if (GameObject.Find ("DialogueBox") == null 
-			&& GameObject.Find("Fader") == null //Or when changing scene
-			&& SceneChanger.instance.menuOpen == false // Or if the pause menu is open
-			&& GameObject.Find("ShopMenu") == null ) { // Or when the shop is open
-				SceneManager.LoadScene ("ShopMenu", LoadSceneMode.Additive);
 		}
 	}
 
@@ -193,6 +181,14 @@ public class PlayerMovement : MonoBehaviour {
 		if (!value) {
 			setIdle ();
 		}
+	}
+
+	/// <summary>
+	/// Gets whether the player should be able to move or not.
+	/// </summary>
+	/// <returns><c>true</c>, if can move was gotten, <c>false</c> otherwise.</returns>
+	public bool getCanMove(){
+		return canMove;
 	}
 
 }
