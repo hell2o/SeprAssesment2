@@ -25,9 +25,9 @@ public class Minigame : MonoBehaviour {
 
 	bool inGame = false;
 
-	float gameTime = 0f;
-	float bunnyTime = 0f; // time untill the next bunny appears (in seconds)
-	float gooseTime = 0f; // time untill the next goose appears (in seconds)
+	float gameTime = 0f;// time since the game started
+	float bunnyTime = 0f; // time until the next bunny appears (in seconds)
+	float gooseTime = 0f; // time until the next goose appears (in seconds)
 
 	const float maxTimeBetweenPopups = 1f;
 	const float maxActiveTime = 2f;
@@ -155,7 +155,9 @@ public class Minigame : MonoBehaviour {
 		}
 		
 	}
-
+	/// <summary>
+	/// Starts the game, called when the start game button is pressed.
+	/// </summary>
 	public void startGame(){
 		startPanel.SetActive (false);
 		inGame = true;
@@ -165,12 +167,20 @@ public class Minigame : MonoBehaviour {
 		
 	}
 
+	/// <summary>
+	/// Called when a goose button is hit, takes the position of the button in the gooseButtons array.
+	/// </summary>
+	/// <param name="pos">Position.</param>
 	void hitGoose(int pos){
 		gooseButtons [pos].SetActive (false);
 		score += 1;
 		updateText ();
 	}
 
+	/// <summary>
+	/// Called when a bunny button is hit, takes the position of the button in the bunnyButtons array
+	/// </summary>
+	/// <param name="pos">Position.</param>
 	void hitBunny(int pos){
 		bunnyButtons [pos].SetActive (false);
 		if (lives > 0) {
@@ -181,11 +191,17 @@ public class Minigame : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Updates the score and lives text.
+	/// </summary>
 	void updateText(){
 		scoreText.text = "Score: " + score.ToString ();
 		livesText.text = lives.ToString () + " Lives Left";
 	}
-		
+
+	/// <summary>
+	/// called when a game ending state is detected in the update function
+	/// </summary>
 	void endGame(){
 		endPanel.SetActive (true);
 		Debug.Log ("GAME OVER");
@@ -198,6 +214,9 @@ public class Minigame : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Quits the mini game called when the quit button is pressed.
+	/// </summary>
 	public void quitGame(){
 		SceneManager.UnloadSceneAsync (this.gameObject.scene);
 		move.setCanMove (true);
