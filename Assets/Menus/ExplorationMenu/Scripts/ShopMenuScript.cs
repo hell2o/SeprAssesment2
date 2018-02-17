@@ -73,6 +73,9 @@ public class ShopMenuScript : MonoBehaviour {
 		Debug.Log ("Destination: " + dest.Type);
 	}
 
+	/// <summary>
+	/// Prepares the shop buttons.
+	/// </summary>
 	void PrepareButtons (){
 		Text MoneyText = GameObject.Find ("MoneyText").GetComponent<Text> ();
 		MoneyText.text = "Money: " + data.Money.ToString () + " Units";
@@ -81,6 +84,7 @@ public class ShopMenuScript : MonoBehaviour {
 
 		button = GameObject.Find ("HammerButton").GetComponent<Button>();
 		if (data.Money >= 70 && data.countItems () < data.Items.Length) {
+			button.onClick.RemoveAllListeners ();
 			button.onClick.AddListener (delegate {
 				data.addItem (new Hammer ());
 				data.Money -= 70;
@@ -92,7 +96,7 @@ public class ShopMenuScript : MonoBehaviour {
 		}
 
 		for (int i = 0; i < 6; i++) {
-			//If there is an item in the item inventory
+			//If there is an item in the inventory slot
 			if (items[i] != null) {
 				createItemCell(itemContainers[i], data.Items[i]);
 			}
@@ -101,7 +105,9 @@ public class ShopMenuScript : MonoBehaviour {
 
 	
 	}
-
+	/// <summary>
+	/// Exits the shop.
+	/// </summary>
 	public void ExitShop(){
 		Destroy (this.gameObject);
 		move.setCanMove (true);

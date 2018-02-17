@@ -6,9 +6,7 @@ using System;
 using UnityEngine.SceneManagement;
 
 public class MinigameTest {
-	bool sceneLoaded = false;
 	GameObject player;
-	PlayerMovement playerScript;
 
 	public IEnumerator Setup() {
 		
@@ -27,8 +25,6 @@ public class MinigameTest {
 			new RaiseDefence ("buffed up against", "Increase your defence by 10%", 2, 0.1f),
 			(Texture2D)Resources.Load ("Character1", typeof(Texture2D)));
 		player = GameObject.Find ("Player");
-		playerScript = player.GetComponent<PlayerMovement> ();
-		sceneLoaded = true;
 		player.transform.position = new Vector2 (0, 0);
 		yield return null;
 	}
