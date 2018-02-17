@@ -44,6 +44,7 @@ public abstract class Item {
 /// <summary>
 /// An item that increases a player's attack stat by 5
 /// </summary>
+[System.Serializable]
 public class Hammer : Item {
 
 	public Hammer () {
@@ -65,6 +66,7 @@ public class Hammer : Item {
 /// <summary>
 /// An item that increases a player's speed stat by 5
 /// </summary>
+[System.Serializable]
 public class Trainers : Item {
 
 	public Trainers () {
@@ -84,6 +86,7 @@ public class Trainers : Item {
 /// <summary>
 /// An item that increases a player's luck stat by 5
 /// </summary>
+[System.Serializable]
 public class RabbitFoot : Item {
 
 	public RabbitFoot () {
@@ -104,6 +107,7 @@ public class RabbitFoot : Item {
 /// <summary>
 /// An item that increases a player's maximum magic points by 3
 /// </summary>
+[System.Serializable]
 public class MagicAmulet : Item {
 
 	public MagicAmulet () {
@@ -128,6 +132,7 @@ public class MagicAmulet : Item {
 /// <summary>
 /// An item that increases a player's defence stat by 5
 /// </summary>
+[System.Serializable]
 public class Shield : Item {
 
 	public Shield () {
@@ -148,6 +153,7 @@ public class Shield : Item {
 /// <summary>
 /// An item that increases a player's attack stat by 2 and defence stat by 3
 /// </summary>
+[System.Serializable]
 public class Armour : Item {
 
 	public Armour () {

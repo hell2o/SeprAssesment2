@@ -30,17 +30,17 @@ public class ExplorationTest {
 				new MagicAttack ("hi-jump kicked", "Kick with power 15", 3, 15),
 				new RaiseDefence ("buffed up against", "Increase your defence by 10%", 2, 0.1f),
 				(Texture2D)Resources.Load ("Character1", typeof(Texture2D)));
-			player = GameObject.Find ("Player");
-			playerScript = player.GetComponent<PlayerMovement> ();
-			camera = GameObject.Find ("PlayerCamera");
 			sceneLoaded = true;
 		}
+		player = GameObject.Find ("Player");
+		playerScript = player.GetComponent<PlayerMovement> ();
+		camera = GameObject.Find ("PlayerCamera");
 		player.transform.position = new Vector2 (0, 0);
 		yield return null;
 	}
 
 	[UnityTest]
-	public IEnumerator CameraMovement() {
+	public IEnumerator E1CameraMovement() {
 		yield return Setup ();
 		//Move Player
 		player.transform.position = new Vector2 (5, 5);
@@ -54,7 +54,7 @@ public class ExplorationTest {
 	}
 
 	[UnityTest]
-	public IEnumerator PlayerMovement() {
+	public IEnumerator E3PlayerMovement() {
 		//Reset
 		yield return Setup ();
 		//Up
@@ -72,11 +72,13 @@ public class ExplorationTest {
 	}
 
 	[UnityTest]
-	public IEnumerator PlayerAnimation() {
+	public IEnumerator E2PlayerAnimation() {
 		//Reset
 		yield return Setup ();
+
 		//Get Animator object
 		Animator anim = player.GetComponent<Animator> ();
+		yield return WaitForFrames(20);
 
 		//Up
 		playerScript.move("Up");
@@ -108,7 +110,7 @@ public class ExplorationTest {
 	}
 
 	[UnityTest]
-	public IEnumerator ObjectCollision() {
+	public IEnumerator E4ObjectCollision() {
 		//Reset
 		yield return Setup ();
 		//Should move 0.1 * 120 = 12 units but square at 9 units
@@ -118,7 +120,7 @@ public class ExplorationTest {
 	}
 
 	[UnityTest]
-	public IEnumerator DialogueBox() {
+	public IEnumerator E5DialogueBox() {
 		//Setup
 		yield return Setup ();
 		ObjectInteraction objectScript = GameObject.Find ("Triangle").GetComponentInChildren<ObjectInteraction> ();
@@ -156,7 +158,7 @@ public class ExplorationTest {
 	}
 
 	[UnityTest]
-	public IEnumerator ItemObtain() {
+	public IEnumerator E6ItemObtain() {
 		//Setup
 		yield return Setup ();
 		ObjectInteraction objectScript = GameObject.Find ("TriangleChest").GetComponentInChildren<ObjectInteraction> ();
@@ -189,7 +191,7 @@ public class ExplorationTest {
 	}
 
 	[UnityTest]
-	public IEnumerator HealingStation() {
+	public IEnumerator E7HealingStation() {
 		//Reset
 		yield return Setup();
 		//Lower Player Health and Magic
@@ -217,7 +219,7 @@ public class ExplorationTest {
 	}
 
 	[UnityTest]
-	public IEnumerator Portal() {
+	public IEnumerator E8Portal() {
 		//Reset
 		yield return Setup ();
 		//Get Initial Scene

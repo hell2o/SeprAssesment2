@@ -34,8 +34,8 @@ public class Minigame : MonoBehaviour {
 	float activeTime = 2f;// how long the popups can currently be active for (in seconds)
 	const float minActiveTime = 0.4f;
 
-	int score = 0;
-	int lives = 3;
+	public int score = 0;
+	public int lives = 3;
 
 	// Use this for initialization
 	void Start () {
@@ -93,7 +93,6 @@ public class Minigame : MonoBehaviour {
 
 			float tempActiveTime =  (maxActiveTime / Mathf.Pow(gameTime, 0.5f)); // function that defines how long buttons are visible for
 			activeTime = Mathf.Clamp (tempActiveTime, minActiveTime, maxActiveTime); //clamp the above into a reasonable range
-			Debug.Log(activeTime);
 			for (int i = 0; i < bunnyButtons.Count; i++) {
 				if (bunnyButtons [i].activeInHierarchy) {
 					bunnyButtonsTimeActive[i] += Time.deltaTime;

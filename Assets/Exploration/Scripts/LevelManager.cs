@@ -62,6 +62,8 @@ public class LevelManager : MonoBehaviour {
 				" but low standard attack. Both her specials attack using her superior intelect.";
 			break;
 		default: 
+			newPlayer = null;
+			playerDesc = "You beat the Boss!!!";
 			break;
 		}
 
@@ -80,7 +82,9 @@ public class LevelManager : MonoBehaviour {
 	/// </summary>
 	/// <returns>The then load.</returns>
 	private IEnumerator WaitThenLoad() {
-		PlayerData.instance.data.addPlayer (newPlayer);
+		if (newPlayer != null) {
+			PlayerData.instance.data.addPlayer (newPlayer);
+		}
 		GameObject dialogueBox = GameObject.Find ("Dialogue Manager").transform.Find ("DialogueBox").gameObject;
 		dialogueBox.SetActive (true);
 		Text dialogueText = dialogueBox.transform.Find("DialogueText").GetComponent<Text> ();

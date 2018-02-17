@@ -20,6 +20,7 @@ public class WorldMapTest {
 		yield return null;
 		player = GameObject.Find ("Player");
 		playerScript = player.GetComponent<PlayerMovement> ();
+		player.transform.position = new Vector3 (0,-1);
 
 	}
 
