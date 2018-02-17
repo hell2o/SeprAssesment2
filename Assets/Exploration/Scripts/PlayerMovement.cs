@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour {
     /// <summary>
     /// Shows or hides the exploration menu when the escape key is pressed, detected and called by <see cref="FixedUpdate"/> 
     /// </summary>
-    public void explorationMenu() {
+    private void explorationMenu() {
 		//Make sure menu can't be opened while dialogue box is on screen
 		if (GameObject.Find ("DialogueBox") == null 
 			&& GameObject.Find("Fader") == null//Or when changing scene
