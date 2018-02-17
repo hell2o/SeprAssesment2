@@ -40,7 +40,9 @@ public class MenuScript : MonoBehaviour {
 		player = GameObject.Find ("Player");
 		player.SetActive (false);
 		soundOn = !SoundManager.instance.BGMSource.mute;
-		sound ();
+		if (soundOn) {
+			sound ();
+		}
 	}
 
 	/// <summary>
